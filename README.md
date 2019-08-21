@@ -1,5 +1,7 @@
 # sagemaker-automation
-1. create a lambda function with code below, you would need to replace the 'bucket', 'prefix' and 'transform_channel' to your own s3 object path and filename
+1. create a lmabda function with below setting
+    ![](image/fet1.tiff)
+2. create a lambda function with code below, you would need to replace the 'bucket', 'prefix' and 'transform_channel' to your own s3 object path and filename
 
 ``` Python
 import boto3
