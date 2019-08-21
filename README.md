@@ -51,7 +51,7 @@ click save
 
 ## cloudwatch event for scheduled triggering lambda
 1. in cloudwatch console, go to event -> rules and click 'create rule'
-2. config the schedule event as below, you can refer to cron expression ![here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
+2. config the schedule event as below, you can refer to cron expression [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
 ![](image/fet2.png)
 click 'configure detail'
 3.give it a name and description and click 'save', note that this event will be trigger at the nearest time, instead of the time we click 'save'
