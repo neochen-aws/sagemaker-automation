@@ -1,7 +1,8 @@
 # sagemaker-automation
-1. create a lmabda function with below setting
-    ![](image/fet1.tiff)
-2. create a lambda function with code below, you would need to replace the 'bucket', 'prefix' and 'transform_channel' to your own s3 object path and filename
+## lambda function to call boto3 API to create sagemaker batch transform job
+1. create a lmabda function with below setting, and click create
+    ![](image/fet1.png)
+2. paste code below, you would need to replace the 'bucket', 'prefix' and 'transform_channel' to your own s3 object path and filename
 
 ``` Python
 import boto3
@@ -44,3 +45,17 @@ def lambda_handler(event, context):
         print('Unable to create transform job.')
         raise(e)
 ```
+click save
+3. click test, fill in event name(we don't need to parse event input for this test) and save, then click test.
+
+## cloudwatch event for scheduled triggering lambda
+1. in cloudwatch console, go to event -> rules and click 'create rule'
+2. config the schedule event as below, you can refer to cron expression ![here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
+![](image/fet2.png)
+click 'configure detail'
+3.give it a name and description and click 'save', note that this event will be trigger at the nearest time, instead of the time we click 'save'
+
+## sagemaker console
+1. go to sagemaker console -> batch transform to see if the transform job is work as expected
+![](image/fet3.png)
+
