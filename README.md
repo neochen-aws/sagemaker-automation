@@ -1,4 +1,7 @@
 # sagemaker-automation
+## architecture diagram
+![](https://neochen-test.s3-ap-northeast-1.amazonaws.com/fet4.png)
+
 ## lambda function to call boto3 API to create sagemaker batch transform job
 1. create a lmabda function with below setting, and click create
     ![](image/fet1.png)
