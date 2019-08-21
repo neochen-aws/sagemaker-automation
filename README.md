@@ -46,6 +46,7 @@ def lambda_handler(event, context):
         raise(e)
 ```
 click save
+
 3. click test, fill in event name(we don't need to parse event input for this test) and save, then click test.
 
 ## cloudwatch event for scheduled triggering lambda
